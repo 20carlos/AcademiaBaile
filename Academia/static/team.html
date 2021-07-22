@@ -1,0 +1,254 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Maestros</title>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+        $(document).ready(function() {
+            $(".dropdown img.flag").addClass("flagvisibility");
+
+            $(".dropdown dt a").click(function() {
+                $(".dropdown dd ul").toggle();
+            });
+                        
+            $(".dropdown dd ul li a").click(function() {
+                var text = $(this).html();
+                $(".dropdown dt a span").html(text);
+                $(".dropdown dd ul").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+                        
+            function getSelectedValue(id) {
+                return $("#" + id).find("dt a span.value").html();
+            }
+
+            $(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd ul").hide();
+            });
+
+
+            $("#flagSwitcher").click(function() {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+            });
+        });
+     </script>
+     <!-- Add fancyBox main JS and CSS files -->
+	<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+	<link href="css/magnific-popup.css" rel="stylesheet" type="text/css">
+		<script>
+			$(document).ready(function() {
+				$('.popup-with-zoom-anim').magnificPopup({
+					type: 'inline',
+					fixedContentPos: false,
+					fixedBgPos: true,
+					overflowY: 'auto',
+					closeBtnInside: true,
+					preloader: false,
+					midClick: true,
+					removalDelay: 300,
+					mainClass: 'my-mfp-zoom-in'
+			});
+		});
+		</script>
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="row">
+			  <div class="col-md-12">
+				 <div class="header-left">
+					 <div class="logo">
+						<a href="index.html"><img src="images/logo.jpg" alt=""/></a>
+					 </div>
+					 <div class="menu">
+						  <a class="toggleMenu" href="#"><img src="images/nav.png" alt="" /></a>
+						    <ul class="nav" id="nav">
+						    	<li class="current"><a href="team.html">Maestros</a></li>
+						    	<li><a href="experiance.html">Eventos</a></li>
+								<li><a href="contact.html">Contacto</a></li>								
+								<div class="clear"></div>
+							</ul>
+							<script type="text/javascript" src="js/responsive-nav.js"></script>
+				    </div>							
+	    		    <div class="clear"></div>
+	    	    </div>
+	            <div class="header_right">
+						<!----search-scripts---->
+						<script src="js/classie.js"></script>
+						<script src="js/uisearch.js"></script>
+						<script>
+							new UISearch( document.getElementById( 'sb-search' ) );
+						</script>
+				  <ul class="icon1 sub-icon1 profile_img">
+					<li class="login_button"><a href="login.php">Login</a></li>
+				  </ul>
+				  <div class="clear"></div>
+	       </div>
+	      </div>
+		 </div>
+	    </div>
+	  </div>
+     <div class="main">
+      <div class="shop_top">
+		<div class="container">
+			<div class="row team_box">
+				<h3 class="m_2">Maestros</h3>
+				
+				<div class="col-md-3 team1">
+				  <a class="popup-with-zoom-anim" href="#small-dialog3"><img src="images/alexia.jpeg" class="img-responsive" title="continue" alt=""/></a>
+				    <div id="small-dialog3" class="mfp-hide">
+					   <div class="pop_up2">
+					   	 <h2>ALEXIA BARBA </h2>
+						 <p>•Lleva 8 años bailando con experiencia en géneros como:</p>
+						 <p> Hip hop </p>
+						 <p> Reggaetón</p>
+						 <p> Estilos (dance hall, afro, Kuduro, walking, Vogue, locking, house)</p>
+						 <p>•Una amplia trayectoria en concursos Nacionales</p>
+						 <p>•Posee un reconocimiento a “La mejor bailarina del TIR 2019” TORNEO INTERNACIONAL DE REGGAETÓN </p>
+						 <p>•Ha sido parte de grupos como: Street&Beat, The Legion, Neutral Zone y Brothers Crew. Actualmente pertenece al grupo Beat Squad de Adrián Rivera Director de Crazy Hip Hop Company.</p>
+						 <p>•Integrante de la Escuela del Ballet Folklórico de México “Amalia Hernández” </p>
+						 <p> En esta escuela estudio géneros como: Folklor, bailes de salón, Danzón, Ballet y Jazz.</p>
+						 <p>El baile llegó a mi vida sin querer pero una vez que descubres lo que te hace sentí y lo que puedes hacer con tu cuerpo no puedes dejar de hacerlo. Un día sin bailar para mi es un día perdido, un día aburrido. Al bailar todo lo exterior no importa, solo importo yo y mi danza, mi cuerpo, mis sensaciones. Al bailar soy otra persona..</p>
+					   </div>
+					</div>
+					<h4 class="m_5"><a href="#">ALEXIA BARBA</a></h4>
+				    <p class="m_6">Mestra de Regueton, Hip-Hop</p>
+				</div>
+				
+				<div class="col-md-3 team1">
+					<a class="popup-with-zoom-anim" href="#small-dialog4"><img src="images/sandy.JPG" class="img-responsive" title="continue" alt=""/></a>
+				    <div id="small-dialog4" class="mfp-hide">
+					   <div class="pop_up2">
+					   	 <h2>Sandy Reyes </h2>
+						 <p>Semblanza Curricular 
+                            Sandra E. Reyes Suárez
+                            Nació en el estado de México el 9 de Febrero de 1984, desde muy pequeña mostró interés por las artes escénicas, motivo por el cual, su madre la inscribió en distintos talleres dancísticos y así poder desarrollar sus habilidades, a los 16 años se integró a la compañía de Ballet y Danzas Modernas del Centro Cultural Ecatepec, formándose en diferentes disciplinas como Ballet, Jazz, Danza Folclórica y Hawaiano y Tahitiano. 
+                                Estudió una carrera Técnica en ejecución de Danza Clásica y Contrología en el área de Difusión Cultural UNAM, fue bailarina de la compañía de Danza de la UNAM del 2004 al 2008, periodo durante el cual, se presentó en diferentes escenarios en las distintas temporadas de la compañía, haciendo giras por todo el país, al mismo tiempo en el que se desempeñó como profesora de Educación Artística en diversos colegios y estudios de danza en el estado de México.
+                                En 2005 se certificó como profesora de Jazz en diferentes estilos en el INJUVE, en 2007 inició su preparación como bailarina en Ritmos Latinos, formando parte de la compañía "Latin Xplosion L. A.", especializándose en ritmos como salsa on 1, salsa on 2, bachata tradicional y fusión así como Pachanga.
+                                Es Licenciada en Educación Dancística con enfoque en Danza Folclórica 20011-2016, al finalizar su licenciatura, se especializó en una carrera alterna como Máster en ritmos latinos 2016-2018 y en el año 2018, complementó su Técnica Clásica con una certificación en Técnica Inglesa por la ISSTD.
+                                Ha tomado cursos, talleres y diplomados en las diferentes ramas dancísticas que domina y ha participado en eventos de talla internacional, tanto en la Danza, como en los Ritmos Latinos.
+                                Actualmente es difusora cultural por los municipios de Ecatepec y Tecámac, representante artístico del imperio de salones OM y Director Creativo y Gestor Cultural del proyecto "Bailarines Integrales" por el Centro de Formación Profesional para la Danza del Valle de México.</p>
+						 <p>La danza para mí es un estilo de vida, es una forma de afrontar y en ocasiones escapar de la realidad, es aparecer y desaparecer cuando así lo deseas, es conectar con la naturaleza, con la vida, con el mundo, con otros seres, pero sobre todo, es conectarse conmigo misma.
+                            La danza me lleva a otros lugares, me transporta, me hace sentir libre, me conecta con una energía que no puedo explicar, pero que puedo transmitir, a través de la danza puedo ser quien yo quiero ser!!!.</p>
+					   </div>
+					</div>
+					<h4 class="m_5"><a href="#">Sandy Reyes</a></h4>
+				    <p class="m_6">Maestra de Jazz, Salsa en liena</p>
+				</div>
+				
+				<div class="col-md-3 team1">
+					<a class="popup-with-zoom-anim" href="#small-dialog5"><img src="images/alan.jpeg" class="img-responsive" title="continue" alt=""/></a>
+				    <div id="small-dialog5" class="mfp-hide">
+					   <div class="pop_up2">
+					   	 <h2>Alan Barron </h2>
+						 <p>Tiene 5 años bailando 
+                         <p>Entrenamiento en géneros como </p> 
+                         <p>Reggaeton, Hip Hop , Jazz Funk , Ritmos Latinos </p>
+                         <p>Sé trayectoria consta de participaciones en proyectos como </p>
+                         <p>- CARAVANA COCA-COLA  2017 </p>
+                         <p>-Programas de televisión (Cuéntamelo Ya , Hoy ) </p>
+                         <p>- Comercial para Pepsi </p>
+                         <p>- Show Latino en </p>
+                         <p> “Mardigras Six Flags México” </p>
+                         <p> Participación en grupos de competencia con la compañía </p>
+                         <p> The RANGERZ de Hugo Mejía </p>
+                         <p> Y actualmente </p>
+                         <p> Beat Squad de Adrián Rivera.</p>
+						 <p>Para mi la danza es algo con lo que puedo transmitir todos mis sentimientos ,me hace muy feliz el hecho de poner alguna canción y con movimientos ser feliz y libre 
+                             Me llena por completo la danza.</p>
+					   </div>
+					</div>
+					<h4 class="m_5"><a href="#">Alan Barron</a></h4>
+				    <p class="m_6">Maestro de Regueton, Hip-Hop</p>
+				</div>
+				
+				<div class="col-md-3 team1">
+					<a class="popup-with-zoom-anim" href="#small-dialog6"><img src="images/alann.jpeg" class="img-responsive" title="continue" alt=""/></a>
+				    <div id="small-dialog6" class="mfp-hide">
+					   <div class="pop_up2">
+					   	 <h2>Fanny </h2>
+						 <p>Con mi carrera dancistica llevo 13 años, desde los 8 años comencé con gimnasia rítmica la cual dure 3 años, de ahí en adelante comencé en una pequeña academia llamada nikens 3 años más , la cual tomaba clases de todos los géneros , comencé a amar tanto la danza que no podía dejar de bailar y la academia cerro, llegué a otra academia llamada Crazy cool en la cual dure  2 años y medio, quería seguir entrenando así que comencé a ir a la CDMX , ví que hacían audiciones para pertenecer a un grupo así que hice audición y me quedé en un grupo de baile llamado Rgton-vibes, en el cual hizo explotar mi cabeza sabiendo cuánto no conocía del baile.</p>
+						 <p>Empecé a entrenar más géneros durante 2 años y actualmente pertenezco a varias compañías de baile (Zenshowbis, Mes, Kings blood) y ahora puedo compartir mi danza en mi casa New Blood, he impartido clases también en Playa del Carmen y Guadalajara. Permitiéndole darles un poco de todo lo aprendido y lo que sigo aprendiendo.</p>
+						 <p>Participe en demasiados concursos nacionales y un internacional representando a México en 2do lugar.
+                            Bailarina del artista  Darell y Candela Music.</p>
+					   </div>
+					</div>
+					<h4 class="m_5"><a href="#">Fanny</a></h4>
+				    <p class="m_6">Maestra de Regueton, Hip-Hop</p>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-4 team_bottom">
+				  <ul class="team_list">
+					<h4>Horarios</h4>
+					<li><a>Lunes:</a><p>Clase nivel principiantes (Regueton) 4:00-5:00 pm</p>
+									 <p>Clase nivel intermedio (Regueton) 5:10-6:10 pm</p></li>
+		            <li><a>Martes:</a><p>Clase fitness 8:00-9:00 am</p>
+									  <p>Regueton nivel avanzado 5:00-6:20 pm </p> 
+									  <p>Jazz 6:20-7:20 pm</p>
+									  <p>Salsa en linea 7:20-8:20 pm</p></li>
+		            <li><a>Miercoles:</a><p>Regueton nivel avanzado 5:00-6:20 pm </p> 
+										 <p>Hip-hop 6:30-8:00 pm</p></li>
+		            <li><a>Jueves:</a><p>Clase fitness 8:00-9:00 am </p> 
+									  <p>Regueton nivel avanzado 5:00-6:20 pm </p> 
+									  <p>Jazz 6:20-7:20 pm</p>
+									  <p>salsa en linea 7:20-8:20 pm</p></li>
+		            <li><a>Domingo:</a><p>Ensayos para eventos de 15 años</p></li>
+		          </ul>
+				</div>
+				<div class="col-md-8">
+					<ul class="team_list">
+					 <h4>Maestro y dueño de New Blood Dance Studio</h4>
+					 <p class="m_7">Empecé mi entrenamiento en el baile, como instructor de baile fitness en la compañía "latín fussion" con el maestro Carlitos ferreira, durando varios años, después continué con mi proceso dancistico en clases particulares y grupales en los géneros de Jazz, ballet, salsa en línea, ritmos latinos, reggaetón , twerk con grandes exponentes del medio de la danza. </p>
+
+                     <p class="m_7">Actualmente soy el director y dueño de New blood dance estudio pero eso no.quiere decir que dejaré de prepararme, el baila la danza es algo que se vive día a día y se lleva en el alma para siempre.</p>
+		             <img src="images/eduardo.JPG" class="img-responsive" alt=""/>
+		          </ul>
+				</div>
+			</div>
+		</div>
+	   </div>
+	  </div>
+	  <div class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<ul class="footer_box">
+						<h4></h4>
+						
+						<ul class="social">	
+						  <li class="facebook"><a href="#"><span> </span></a></li>
+						  <li class="twitter"><a href="#"><span> </span></a></li>
+						  <li class="instagram"><a href="#"><span> </span></a></li>	
+						  <li class="youtube"><a href="#"><span> </span></a></li>										  				
+						</ul>
+						   
+					</ul>
+				</div>
+				<div class="col-md-3">
+					
+				</div>
+				<div class="col-md-3">
+					<p>2018 - 2021 © New Blood - Todos los derechos reservados.</p>
+					<a href="#">Términos y condiciones.</a> <a href="#">Aviso de privacidad.</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>	
+</html>

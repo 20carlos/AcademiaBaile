@@ -1,0 +1,213 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Paquete</title>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+        $(document).ready(function() {
+            $(".dropdown img.flag").addClass("flagvisibility");
+
+            $(".dropdown dt a").click(function() {
+                $(".dropdown dd ul").toggle();
+            });
+                        
+            $(".dropdown dd ul li a").click(function() {
+                var text = $(this).html();
+                $(".dropdown dt a span").html(text);
+                $(".dropdown dd ul").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+                        
+            function getSelectedValue(id) {
+                return $("#" + id).find("dt a span.value").html();
+            }
+
+            $(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd ul").hide();
+            });
+
+
+            $("#flagSwitcher").click(function() {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+            });
+        });
+     </script>
+     <!----details-product-slider--->
+				<!-- Include the Etalage files -->
+					<link rel="stylesheet" href="css/etalage.css">
+					<script src="js/jquery.etalage.min.js"></script>
+				<!-- Include the Etalage files -->
+				<script>
+						jQuery(document).ready(function($){
+			
+							$('#etalage').etalage({
+								thumb_image_width: 300,
+								thumb_image_height: 400,
+								
+								show_hint: true,
+								click_callback: function(image_anchor, instance_id){
+									alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
+								}
+							});
+							// This is for the dropdown list example:
+							$('.dropdownlist').change(function(){
+								etalage_show( $(this).find('option:selected').attr('class') );
+							});
+
+					});
+				</script>
+				<!----//details-product-slider--->	
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="row">
+			  <div class="col-md-12">
+				 <div class="header-left">
+					 <div class="logo">
+						<a href="index.html"><img src="images/logo.jpg" alt=""/></a>
+					 </div>
+					 <div class="menu">
+						  <a class="toggleMenu" href="#"><img src="images/nav.png" alt="" /></a>
+						    <ul class="nav" id="nav">
+						    	<li><a href="team.html">Maestros</a></li>
+						    	<li><a href="experiance.html">Eventos</a></li>
+								<li><a href="contact.html">Contacto</a></li>								
+								<div class="clear"></div>
+							</ul>
+							<script type="text/javascript" src="js/responsive-nav.js"></script>
+				    </div>							
+	    		    <div class="clear"></div>
+	    	    </div>
+	            <div class="header_right">
+						<!----search-scripts---->
+						<script src="js/classie.js"></script>
+						<script src="js/uisearch.js"></script>
+						<script>
+							new UISearch( document.getElementById( 'sb-search' ) );
+						</script>
+				    <ul class="icon1 sub-icon1 profile_img">
+						<li class="login_button"><a href="login.php">Login</a></li>
+					  </ul>
+					  <div class="clear"></div>
+	       </div>
+	      </div>
+		 </div>
+	    </div>
+	  </div>
+     <div class="main">
+      <div class="shop_top">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-9 single_left">
+				   <div class="single_image">
+					     <ul id="etalage">
+							<li>
+								<a href="optionallink.html">
+									<img class="etalage_thumb_image" src="images/quince.jpeg" />
+									<img class="etalage_source_image" src="images/quince.jpeg" />
+								</a>
+							</li>
+						</ul>
+					    </div>
+				        <!-- end product_slider -->
+				        <div class="single_right">
+				        	<h3>Paquete sin bailarines</h3>
+				        	<p class="m_10">-Entrada</p>
+							<p class="m_10">-Ceremonia</p>
+							<p class="m_10">-Vals principal</p>
+							<p class="m_10">-2 modernos</p> 
+							<p class="m_10">-Vestuarios solo para ti</p> 
+							<p class="m_10">-Disparos de co2</p> 
+							<p class="m_10">-Ensayos en la academia</p> 
+							<p class="m_10">-Edicion musical</p> 
+							<p class="m_10">-Logistica del evento</p> 
+				        
+							
+				        </div>
+				        <div class="clear"> </div>
+				</div>
+				<div class="col-md-3">
+				  <div class="box-info-product">
+					<p class="price2">$7000.00</p>
+				   </div>
+			   </div>
+			</div>		
+			<div class="desc">
+			   
+			</div>
+			<div class="row">
+				<h4 class="m_11">Otros paquetes</h4>
+				<div class="col-md-4 product1">
+					<img src="images/logo 3.jpg" class="img-responsive" alt=""/> 
+					<div class="shop_desc"><a href="single.html">
+						</a><h3><a href="single.html"></a><a href="singlep2.html">Paquete #2</a></h3>
+						<p>Promoción sin bailarines </p>
+						<span class="reducedfrom">$15000.00</span>
+						<span class="actual">$13000.00</span><br>
+				    </div>
+				</div>
+				<div class="col-md-4 product1">
+					<img src="images/logo 4.jpg" class="img-responsive" alt=""/> 
+					<div class="shop_desc"><a href="single.html">
+						</a><h3><a href="single.html"></a><a href="singlep3.html">Paquete #3</a></h3>
+						<p>Promoción con bailarines </p>
+						<span class="reducedfrom">$20000.00</span>
+						<span class="actual">$18000.00</span><br>
+				    </div>
+				</div>
+				<div class="col-md-4">
+					<img src="images/logo 5.jpg" class="img-responsive" alt=""/> 
+					<div class="shop_desc"><a href="single.html">
+						</a><h3><a href="single.html"></a><a href="singlep4.html">Paquete #4</a></h3>
+						<p>Promoción con bailarines </p>
+						<span class="reducedfrom">$25000.00</span>
+						<span class="actual">$23000.00</span><br>
+				    </div>
+				</div>
+			</div>	
+	     </div>
+	   </div>
+	  </div>
+	  <div class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<ul class="footer_box">
+						<h4></h4>
+						
+						<ul class="social">	
+						  <li class="facebook"><a href="#"><span> </span></a></li>
+						  <li class="twitter"><a href="#"><span> </span></a></li>
+						  <li class="instagram"><a href="#"><span> </span></a></li>	
+						  <li class="youtube"><a href="#"><span> </span></a></li>										  				
+						</ul>
+						   
+					</ul>
+				</div>
+				<div class="col-md-3">
+					
+				</div>
+				<div class="col-md-3">
+					<p>2018 - 2021 © New Blood - Todos los derechos reservados.</p>
+					<a href="#">Términos y condiciones.</a> <a href="#">Aviso de privacidad.</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>	
+</html>

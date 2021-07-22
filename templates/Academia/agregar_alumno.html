@@ -1,0 +1,172 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <link rel="shortcut icon" href="#" />
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Nuevo Alumno</title>
+
+        <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'estilos.css' %}">
+        <link rel="stylesheet" href="{% static 'plugins/sweetalert2/sweetalert2.min.css' %}">        
+        
+        <link rel="stylesheet" type="text/css" href="{% static 'fuentes/iconic/css/material-design-iconic-font.min.css' %}">
+        <script type="text/javascript">
+            function mensajes(estado,mensaje)
+            {
+                if (estado != 0) 
+                {
+                    alert(mensaje);
+                }
+            }
+        </script>
+
+        <link href="{% static 'css/bootstrap.css' %}" rel='stylesheet' type='text/css' />
+        <link href="{% static 'css/style.css' %}" rel='stylesheet' type='text/css' />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <!--<script src="js/jquery.easydropdown.js"></script>-->
+        <!--start slider -->
+        <link rel="stylesheet" href="{% static 'css/fwslider.css' %}" media="all">
+        <script src="{% static 'js/jquery-ui.min.js' %}"></script>
+        <script src="{% static 'js/fwslider.js' %}"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".dropdown img.flag").addClass("flagvisibility");
+
+                $(".dropdown dt a").click(function() {
+                    $(".dropdown dd ul").toggle();
+                });
+                            
+                $(".dropdown dd ul li a").click(function() {
+                    var text = $(this).html();
+                    $(".dropdown dt a span").html(text);
+                    $(".dropdown dd ul").hide();
+                    $("#result").html("Selected value is: " + getSelectedValue("sample"));
+                });
+                            
+                function getSelectedValue(id) {
+                    return $("#" + id).find("dt a span.value").html();
+                }
+
+                $(document).bind('click', function(e) {
+                    var $clicked = $(e.target);
+                    if (! $clicked.parents().hasClass("dropdown"))
+                        $(".dropdown dd ul").hide();
+                });
+
+
+                $("#flagSwitcher").click(function() {
+                    $(".dropdown img.flag").toggleClass("flagvisibility");
+                });
+            });
+         </script>
+        
+    </head>
+    
+    <body onload="mensajes('{{estado}}','{{mensaje}}');">
+
+        <div class="header">
+        <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                 <div class="header-left">
+                     <div class="logo">
+                        <a href="/admin"><img src="{% static 'images/logo.jpg' %}" alt=""/></a>
+                     </div>
+                     <div class="menu">
+                          <a class="toggleMenu" href="#"><img src="{% static 'images/nav.png' %}" alt="" /></a>
+                            <ul class="nav" id="nav">
+                                <li><a href="{% url 'lista_alumnos' %}">Alumnos</a></li>
+                                <li><a href="{% url 'lista_clases' %}">Clases</a></li>                          
+                                <div class="clear"></div>
+                            </ul>
+                            <script type="text/javascript" src="{% static 'js/responsive-nav.js' %}"></script>
+                    </div>                          
+                    <div class="clear"></div>
+                </div>
+                <div class="header_right">
+                        <!----search-scripts---->
+                        <script src="{% static 'js/classie.js' %}"></script>
+                        <script src="{% static 'js/uisearch.js' %}"></script>
+                        <script>
+                            new UISearch( document.getElementById( 'sb-search' ) );
+                        </script>
+                        <!----//search-scripts---->
+                    <ul class="icon1 sub-icon1 profile_img">
+                     <li class="login_button"><a href="{% url 'logout' %}">Logout</a></li>
+                   </ul>
+                   <div class="clear"></div>
+                </div>
+              </div>
+         </div>
+        </div>
+    </div>
+
+     
+      <div class="container-login">
+        <div class="wrap-login">
+            <form class="login-form validate-form" id="formLogin" action="" method="post">
+            	{% csrf_token %}
+                <span class="login-form-title">Nuevo Alumno</span>
+                
+                <div class="wrap-input100">
+                    <input class="input100" type="text" id="id_nombre" name="nombre" placeholder="Nombre" required="true">
+                    <span class="focus-efecto"></span>
+                </div>
+
+                <div class="wrap-input100">
+                    <input class="input100" type="text" id="id_a_paterno" name="a_paterno" placeholder="Apellido Paterno" required="true">
+                    <span class="focus-efecto"></span>
+                </div>
+
+                <div class="wrap-input100">
+                    <input class="input100" type="text" id="id_a_materno" name="a_materno" placeholder="Apellido Materno">
+                    <span class="focus-efecto"></span>
+                </div>
+
+                <div class="wrap-input100">
+                    <input class="input100" type="number" id="id_edad" name="edad" placeholder="Edad" min='1' required="true">
+                    <span class="focus-efecto"></span>
+                </div>
+                
+                <div class="wrap-input100">
+                    <select id="id_clase" name="clase" title="Elija una asignatura" required="">
+                        <option value="" disabled="" selected="">Seleccione una clase</option>
+                        {% for asignatura in clases %}
+                            <option value="{{asignatura.pk}}">{{ asignatura.nombre }} : {{asignatura.horario}}</option>
+                        {% endfor %}
+
+                        <!--<option value="Seccion">Grupo 1</option>
+                        <option value="Seccion">Grupo 2</option>
+                        <option value="Seccion">Grupo 3</option>
+                        <option value="Seccion">Grupo 4</option>-->
+                    </select>
+                    <span class="focus-efecto"></span>
+                </div>
+                
+                <div class="container-login-form-btn">
+                    <div class="wrap-login-form-btn">
+                        <div class="login-form-bgbtn"></div>
+                        <button type="submit" name="submit" class="login-form-btn">Agregar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>     
+        
+        
+     <script src="{% static 'jquery/jquery-3.3.1.min.js' %}"></script>    
+     <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>    
+     <script src="{% static 'popper/popper.min.js' %}"></script>    
+        
+     <script src="{% static 'plugins/sweetalert2/sweetalert2.all.min.js' %}"></script>    
+     <!--<script src="{% static 'codigo.js' %}"></script>-->
+    </body>
+</html>
